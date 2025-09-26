@@ -26,7 +26,10 @@ without running the animation"""
 
 
 from sc8pr import Sketch, Image, BOTTOM
-from sc8prx.ffmpeg import Writer  # Required for recording video
+try:
+    from sc8prx.ffmpeg import Writer  # Required for recording video
+except:
+    Writer = None
 
 def moveDisks(towers, n, start=0, moveTo=1):
     "Recursively generate a sequence of disk movements"
