@@ -15,6 +15,11 @@
 # You should have received a copy of the GNU General Public License
 # along with "sc8pr3-gallery".  If not, see <http://www.gnu.org/licenses/>.
 
+
+# Ensure main.py is in current directory...
+import os
+os.chdir(os.path.split(__file__)[0])
+
 from sc8pr import Sketch, Image, LEFT, BOTTOM
 from sc8pr.sprite import Sprite
 from sc8pr.text import Text, Font
